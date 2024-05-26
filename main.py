@@ -11,7 +11,7 @@ if __name__ == "__main__":
     send_request()
     print("called send_request")
 
-    # Run Discounts API
+    # Run CoinGecko API
     host = os.environ.get("HOST", "0.0.0.0")
     port = int(os.environ.get("PORT", 8080))
     app_api = importlib.import_module("examples.api.app")
