@@ -45,7 +45,7 @@ This repository provides a comprehensive framework for building real-time stream
 
 
 ### Description:
-
+This app is particularly useful for cryptocurrency traders, investors, financial analysts, business owners, developers, and tech enthusiasts. Cryptocurrency traders and investors benefit from real-time exchange rates and market trends, enabling them to make informed trading decisions and manage risks effectively. Financial analysts and advisors can leverage personalized insights and market sentiment analysis to offer better investment advice. Additionally, the capabilities of OpenAI Chat allow users to interact with the application conversationally, making it easier to obtain insights without the need to visit and search multiple websites. This enhances user experience by providing immediate, tailored responses and comprehensive information through a simple chat interface.
 
 ## Dockerfile CMD
 In the Dockerfile, the following command is used to start the application:
