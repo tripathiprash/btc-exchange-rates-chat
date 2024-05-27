@@ -1,25 +1,23 @@
-import importlib
 import os
+import importlib
+import threading
 from dotenv import load_dotenv
-import subprocess
-import sched
 import time
 from examples.coingecko.coingecko_helper import send_request
-load_dotenv()
-# Create a scheduler object
-scheduler = sched.scheduler(time.time, time.sleep)
-if __name__ == "__main__":
-    # try:
-    #     cmd = ["python3", "data_ingestion_cron_job.py"]
 
-    #     subprocess.run(cmd, check=True)
-    # except subprocess.CalledProcessError:
-    #     print("Script execution failed.")
-    # except FileNotFoundError:
-    #     print("Python interpreter or the script was not found.")
-    print("script started")
-    scheduler.enter(120,1,send_request())
-    print("called send_request")
+load_dotenv()
+
+def run_scheduler():
+    while True:
+        send_request()  # Execute send_request
+        time.sleep(3600)  # Wait for 120 seconds (adjust as needed)
+
+if __name__ == "__main__":
+    print("Script started")
+
+    # Start the scheduler in a separate thread
+    scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
+    scheduler_thread.start()
 
     # Run CoinGecko API
     host = os.environ.get("HOST", "0.0.0.0")
