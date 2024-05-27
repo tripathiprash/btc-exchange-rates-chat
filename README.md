@@ -26,6 +26,8 @@ This repository provides a comprehensive framework for building real-time stream
      MODEL_LOCATOR=gpt-3.5-turbo
      MAX_TOKENS=200
      TEMPERATURE=0.0
+     HOST=0.0.0.0
+     PORT=8080
      ```
 2. **Build with Docker Compose:**
    - From the project root folder, open your terminal.
