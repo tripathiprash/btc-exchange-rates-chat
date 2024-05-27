@@ -51,3 +51,10 @@ This app is particularly useful for cryptocurrency traders, investors, financial
 In the Dockerfile, the following command is used to start the application:
 ```dockerfile
 CMD ["bash", "-c", "python3 main.py & streamlit run app.py"]
+```
+
+## Copy Updated JSONL File from Docker Container to Local Computer
+To save a copy of the updated JSONL file from the Docker container to your local computer, use the following command:
+```bash
+docker cp {container_name}:/app/examples/data/exchange_rates.jsonl /path/to/local/directory
+
