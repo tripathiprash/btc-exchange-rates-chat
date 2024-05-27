@@ -10,7 +10,7 @@ load_dotenv()
 def run_scheduler():
     while True:
         send_request()  # Execute send_request
-        time.sleep(3600)  # Wait for 120 seconds (adjust as needed)
+        time.sleep(3600)  # Wait for 3600 seconds (adjust as needed)
 
 if __name__ == "__main__":
     print("Script started")
